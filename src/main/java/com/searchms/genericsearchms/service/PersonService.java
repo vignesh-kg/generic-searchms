@@ -10,13 +10,16 @@ import java.util.List;
 
 @Service
 public class PersonService {
-//    @Autowired
+    @Autowired
     private PersonRepository personRepository;
 
     public List<Person> getPersonByFirstName(String firstName) {
-//        return personRepository.findPersonByFirstname(firstName);
-        return Collections.emptyList();
+        return personRepository.findPersonByFirstname(firstName);
+//        return Collections.emptyList();
+    }
 
+    public void savePersonToElasticSearch(Person person) {
+        personRepository.save(person);
     }
 
 }

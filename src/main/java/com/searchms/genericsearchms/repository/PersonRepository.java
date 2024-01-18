@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-//@Repository
-public interface PersonRepository { //extends ElasticsearchRepository<Person, String>
+@Repository
+public interface PersonRepository extends ElasticsearchRepository<Person, String> {
     List<Person> findPersonByFirstname(String firstname);
 
 }
