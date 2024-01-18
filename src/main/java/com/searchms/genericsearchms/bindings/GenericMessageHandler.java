@@ -2,6 +2,8 @@ package com.searchms.genericsearchms.bindings;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.searchms.genericsearchms.model.Person;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,19 +16,24 @@ public class GenericMessageHandler {
     @KafkaListener(topics = "examplev2")
     void consumeMessage(ConsumerRecord<String, String> record) {
 
-        logger.info("{}", record.value());
+        Person json = jsonMapper(record);
+        logger.info("{}", json);
     }
 
-    private void jsonMapper(ConsumerRecord<String, String> records) {
+    private Person jsonMapper(ConsumerRecord<String, String> records) {
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        records.forEach(record -> {
+        JsonMapper jsonMapper = new JsonMapper();
+        Person person = null;
+ //       records.forEach(record -> {
             try {
-                String json = objectMapper.writeValueAsString(record.value());
-                System.out.println(json);
-            } catch (JsonProcessingException e) {
+                ObjectMapper objectMapper = new ObjectMapper();
+                String json = objectMapper.writeValueAsString(records.value());
+                person = jsonMapper.convertValue(json, Person.class);
+                System.out.println(person);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-        });
+            return person;
+     //   });
     }
 }

@@ -5,16 +5,17 @@ import com.searchms.genericsearchms.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
 public class PersonService {
-    @Autowired
+//    @Autowired
     private PersonRepository personRepository;
 
     public List<Person> getPersonByFirstName(String firstName) {
-
-        return personRepository.findPersonByFirstname(firstName);
+//        return personRepository.findPersonByFirstname(firstName);
+        return Collections.emptyList();
 
     }
 

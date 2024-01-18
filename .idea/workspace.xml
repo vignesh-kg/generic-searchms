@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddfcd8a-70d3-478c-8ab1-027708bbaa33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/util/ElasticsearchConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/bindings/GenericMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/bindings/GenericMessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +89,8 @@
       <workItem from="1705348155669" duration="1796000" />
       <workItem from="1705359028128" duration="5011000" />
       <workItem from="1705508550090" duration="598000" />
+      <workItem from="1705603813263" duration="1562000" />
+      <workItem from="1705605517200" duration="1972000" />
     </task>
     <servers />
   </component>
