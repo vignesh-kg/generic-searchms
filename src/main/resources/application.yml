@@ -8,3 +8,11 @@ spring:
       properties:
         spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
         spring.deserializer.value.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+  elasticsearch:
+    rest:
+      uris: "http://localhost:9200"
+
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
