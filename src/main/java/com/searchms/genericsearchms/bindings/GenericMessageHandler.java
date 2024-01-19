@@ -2,7 +2,7 @@ package com.searchms.genericsearchms.bindings;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.searchms.genericsearchms.service.PersonService;
+import com.searchms.genericsearchms.service.ElasticsearchService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,7 @@ public class GenericMessageHandler {
     private static Logger logger = LoggerFactory.getLogger(GenericMessageHandler.class);
 
     @Autowired
-    PersonService personService;
+    ElasticsearchService personService;
     @KafkaListener(topics = "examplev2")
     void consumeMessage(ConsumerRecord<String, String> record) {
 

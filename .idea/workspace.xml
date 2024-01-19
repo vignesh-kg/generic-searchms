@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddfcd8a-70d3-478c-8ab1-027708bbaa33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/GenericObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/bindings/GenericMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/bindings/GenericMessageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/GenericObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/GenericObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/ElasticsearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

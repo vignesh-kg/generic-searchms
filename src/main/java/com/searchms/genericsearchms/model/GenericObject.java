@@ -12,7 +12,6 @@ public class GenericObject {
 
     public GenericObject(Map<String,Object> map) {
         this.map = map;
-
     }
 
     public GenericObject() {
