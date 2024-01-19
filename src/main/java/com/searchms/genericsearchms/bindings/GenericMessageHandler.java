@@ -2,8 +2,6 @@ package com.searchms.genericsearchms.bindings;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.searchms.genericsearchms.model.Person;
 import com.searchms.genericsearchms.service.PersonService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -11,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @Service
 public class GenericMessageHandler {
@@ -21,20 +21,18 @@ public class GenericMessageHandler {
     @KafkaListener(topics = "examplev2")
     void consumeMessage(ConsumerRecord<String, String> record) {
 
-        Person json = jsonMapper(record);
-        logger.info("{} {}", json.getFirstname(), json.getLastname());
-
+        Map<String,Object> json = jsonMapper(record);
         personService.savePersonToElasticSearch(json);
     }
 
-    private Person jsonMapper(ConsumerRecord<String, String> record) {
+    private Map<String,Object> jsonMapper(ConsumerRecord<String, String> record) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
 
             String json = record.value();
-            Person person = objectMapper.readValue(json, Person.class);
-            System.out.println(person);
-            return person;
+            Map<String,Object> map = objectMapper.readValue(json, Map.class);
+            System.out.println(map);
+            return map;
         }
         catch (JsonProcessingException e) {
             e.printStackTrace();

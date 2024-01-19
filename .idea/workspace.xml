@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddfcd8a-70d3-478c-8ab1-027708bbaa33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/GenericObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/bindings/GenericMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/bindings/GenericMessageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/service/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.test.executor": "Debug",
+    "Application.test.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -116,16 +121,5 @@
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/searchms/genericsearchms/controller/PersonController.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
