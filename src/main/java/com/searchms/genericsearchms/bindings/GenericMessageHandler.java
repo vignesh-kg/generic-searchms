@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class GenericMessageHandler {
-
     private static Logger logger = LoggerFactory.getLogger(GenericMessageHandler.class);
 
     @Autowired

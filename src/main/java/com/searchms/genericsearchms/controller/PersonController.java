@@ -1,6 +1,7 @@
 package com.searchms.genericsearchms.controller;
 
 import com.searchms.genericsearchms.model.Person;
+import com.searchms.genericsearchms.repository.PersonRepository;
 import com.searchms.genericsearchms.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +17,10 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
+    @Autowired
+    private PersonRepository personRepository;
     @GetMapping("/person")
-    public List<Person> findPersonByFirstName(@RequestBody Person person) {
-        return new ArrayList<>();
+    public List<Person> findPersonByFirstName(@RequestBody String firstname) {
+        return personRepository.findPersonByFirstname(firstname);
     }
 }
