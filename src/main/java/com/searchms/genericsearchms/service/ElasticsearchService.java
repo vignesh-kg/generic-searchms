@@ -12,7 +12,7 @@ public class ElasticsearchService {
     @Autowired
     private SearchRepository searchRepository;
 
-    public void savePersonToElasticSearch(Map<String,Object> map) {
+    public void savePersonToElasticSearch(Map<String, Object> map) {
         GenericObject go = new GenericObject();
         go.setMap(map);
         searchRepository.save(go);
