@@ -18,23 +18,23 @@ public class GenericMessageHandler {
 
     @Autowired
     ElasticsearchService personService;
+
     @KafkaListener(topics = "examplev2")
     void consumeMessage(ConsumerRecord<String, String> record) {
 
-        Map<String,Object> json = jsonMapper(record);
+        Map<String, Object> json = jsonMapper(record);
         personService.savePersonToElasticSearch(json);
     }
 
-    private Map<String,Object> jsonMapper(ConsumerRecord<String, String> record) {
+    private Map<String, Object> jsonMapper(ConsumerRecord<String, String> record) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
 
             String json = record.value();
-            Map<String,Object> map = objectMapper.readValue(json, Map.class);
+            Map<String, Object> map = objectMapper.readValue(json, Map.class);
             System.out.println(map);
             return map;
-        }
-        catch (JsonProcessingException e) {
+        } catch (JsonProcessingException e) {
             e.printStackTrace();
             return null;
         }
