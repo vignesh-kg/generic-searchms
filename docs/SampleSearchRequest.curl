@@ -1,0 +1,6 @@
+curl --location --request GET 'http://localhost:8080/get' \
+--header 'Content-Type: application/json' \
+--data '{
+    "searchField": "firstName",
+    "searchValue": "name"
+}'
