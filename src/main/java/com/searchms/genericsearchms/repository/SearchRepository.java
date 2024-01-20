@@ -6,10 +6,8 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Map;
 
 @Repository
-public interface PersonRepository extends ElasticsearchRepository<GenericObject, String> {
-//    List<GenericObject> findPersonByFirstname(String firstname);
-
+public interface SearchRepository extends ElasticsearchRepository<GenericObject, String> {
+    List<GenericObject> findAll();
 }
