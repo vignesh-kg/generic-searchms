@@ -29,21 +29,18 @@ public class SearchController {
     private ElasticsearchTemplate elasticsearchTemplate;
 
     @GetMapping("/getAll")
-    public List<GenericObject> findPersonByFirstName() throws IOException {
+    public List<GenericObject> findAll() throws IOException {
         return searchRepository.findAll();
     }
 
     @GetMapping("/get")
-    public List<GenericObject> findBySearchField(@RequestBody SearchObject searchObject)
-    {
-        Criteria criteria = new Criteria("map."+searchObject.getSearchField()).is(searchObject.getSearchValue());
+    public List<GenericObject> findBySearchField(@RequestBody SearchObject searchObject) {
+        Criteria criteria = new Criteria("map." + searchObject.getSearchField()).is(searchObject.getSearchValue());
         Query query = new CriteriaQuery(criteria);
         List<GenericObject> response = new ArrayList<>();
         SearchHits<GenericObject> searchResponse = elasticsearchTemplate.search(query, GenericObject.class);
-        if(!CollectionUtils.isEmpty(searchResponse.getSearchHits()))
-        {
-            for(SearchHit<GenericObject> searchHit : searchResponse.getSearchHits())
-            {
+        if (!CollectionUtils.isEmpty(searchResponse.getSearchHits())) {
+            for (SearchHit<GenericObject> searchHit : searchResponse.getSearchHits()) {
                 response.add((GenericObject) searchHit.getContent());
             }
         }
